@@ -578,9 +578,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _galleryItems = require("./gallery-items");
 // Change code below this line
-var _simpleLightboxMinCss = require("simplelightbox/dist/simple-lightbox.min.css");
 var _simplelightbox = require("simplelightbox");
 var _simplelightboxDefault = parcelHelpers.interopDefault(_simplelightbox);
+var _simpleLightboxMinCss = require("simplelightbox/dist/simple-lightbox.min.css");
 console.log((0, _galleryItems.galleryItems));
 const gallery = document.querySelector(".gallery");
 const items = [];
@@ -598,7 +598,7 @@ const items = [];
 });
 gallery.append(...items);
 
-},{"./gallery-items":"9C7dK","simplelightbox/dist/simple-lightbox.min.css":"kaxSc","simplelightbox":"9ydBq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9C7dK":[function(require,module,exports) {
+},{"./gallery-items":"9C7dK","simplelightbox":"9ydBq","simplelightbox/dist/simple-lightbox.min.css":"kaxSc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9C7dK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "galleryItems", ()=>galleryItems);
@@ -680,7 +680,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"kaxSc":[function() {},{}],"9ydBq":[function(require,module,exports) {
+},{}],"9ydBq":[function(require,module,exports) {
 /*!
 	By André Rinas, www.andrerinas.de
 	Documentation, www.simplelightbox.com
@@ -2189,6 +2189,6 @@ var _default = SimpleLightbox;
 exports["default"] = _default;
 global.SimpleLightbox = SimpleLightbox;
 
-},{}]},["6jD9l","6XVkV"], "6XVkV", "parcelRequire716c")
+},{}],"kaxSc":[function() {},{}]},["6jD9l","6XVkV"], "6XVkV", "parcelRequire716c")
 
 //# sourceMappingURL=01-gallery.53390864.js.map
