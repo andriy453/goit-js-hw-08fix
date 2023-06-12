@@ -574,18 +574,17 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"6XVkV":[function(require,module,exports) {
+// Add imports above this line
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _galleryItemsJs = require("./gallery-items.js");
+var _galleryItems = require("./gallery-items");
 // Change code below this line
-// Описаний в документації
-var _simpleLightbox = require("simpleLightbox");
-var _simpleLightboxDefault = parcelHelpers.interopDefault(_simpleLightbox);
-// Додатковий імпорт стилів
 var _simpleLightboxMinCss = require("simplelightbox/dist/simple-lightbox.min.css");
-console.log((0, _galleryItemsJs.galleryItems));
+var _simplelightbox = require("simplelightbox");
+var _simplelightboxDefault = parcelHelpers.interopDefault(_simplelightbox);
+console.log((0, _galleryItems.galleryItems));
 const gallery = document.querySelector(".gallery");
 const items = [];
-(0, _galleryItemsJs.galleryItems).map((e)=>{
+(0, _galleryItems.galleryItems).map((e)=>{
     const galleryLink = document.createElement("a");
     galleryLink.className = "gallery__link";
     galleryLink.href = e.original;
@@ -599,37 +598,7 @@ const items = [];
 });
 gallery.append(...items);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./gallery-items.js":"9C7dK","simplelightbox/dist/simple-lightbox.min.css":"kaxSc","simpleLightbox":"eRyOd"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"9C7dK":[function(require,module,exports) {
+},{"./gallery-items":"9C7dK","simplelightbox/dist/simple-lightbox.min.css":"kaxSc","simplelightbox":"9ydBq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9C7dK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "galleryItems", ()=>galleryItems);
@@ -681,7 +650,37 @@ const galleryItems = [
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kaxSc":[function() {},{}],"eRyOd":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"kaxSc":[function() {},{}],"9ydBq":[function(require,module,exports) {
 /*!
 	By André Rinas, www.andrerinas.de
 	Documentation, www.simplelightbox.com
