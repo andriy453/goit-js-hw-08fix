@@ -5,6 +5,12 @@ import { galleryItems } from './gallery-items';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+document.addEventListener("DOMContentLoaded", () => {
+  const gallery = new SimpleLightbox(".gallery a", {
+
+  });
+});
+
 console.log(galleryItems);
 const gallery = document.querySelector(".gallery");
 const items = [];

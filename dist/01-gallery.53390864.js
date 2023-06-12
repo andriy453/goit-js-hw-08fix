@@ -581,6 +581,9 @@ var _galleryItems = require("./gallery-items");
 var _simplelightbox = require("simplelightbox");
 var _simplelightboxDefault = parcelHelpers.interopDefault(_simplelightbox);
 var _simpleLightboxMinCss = require("simplelightbox/dist/simple-lightbox.min.css");
+document.addEventListener("DOMContentLoaded", ()=>{
+    const gallery = new (0, _simplelightboxDefault.default)(".gallery a", {});
+});
 console.log((0, _galleryItems.galleryItems));
 const gallery = document.querySelector(".gallery");
 const items = [];
